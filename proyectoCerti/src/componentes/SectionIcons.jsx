@@ -1,22 +1,10 @@
-const SectionIcons = () => {
-    return (
-        <ul className="nav-icons">
-          <li>
-            <a href="https://www.twitter.com" target="_blank" className="nav-icon"
-              ><i className="fab fa-facebook"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://www.twitter.com" target="_blank" className="nav-icon"
-              ><i className="fab fa-twitter"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://www.twitter.com" target="_blank" className="nav-icon"
-              ><i className="fab fa-squarespace"></i
-            ></a>
-          </li>
-        </ul>
-);
+export const SectionIcons = (props) => {
+  const { social } = props;
+  return (
+    <li>
+      <a href={`https://www.${social}.com`} target="_blank" className="nav-icon">
+        <i className={`fab fa-${social}`}></i>
+      </a>
+    </li>
+  );
 };
-export default SectionIcons

@@ -1,5 +1,5 @@
 import { links } from "../data/data"
-const SectionLinks = () => {
+export const SectionLinks = () => {
     return (
         <ul className="nav-links" id="nav-links">
             {links.map((link) => {
@@ -13,4 +13,3 @@ const SectionLinks = () => {
         </ul>
     );
 };
-export default SectionLinks

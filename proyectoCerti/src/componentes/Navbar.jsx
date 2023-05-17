@@ -1,7 +1,8 @@
 import logo from '../images/logo.svg'
-import SectionLinks from './SectionLinks';
-import SectionIcons from './SectionIcons';
-const NavBar = () => {
+import { SectionLinks } from './SectionLinks';
+import { socialLinks } from '../data/data';
+import { SectionIcons } from './SectionIcons';
+export const NavBar = () => {
     return (
         <nav className="navbar">
       <div className="nav-center">
@@ -13,9 +14,14 @@ const NavBar = () => {
         </div>
         {/* <!-- left this comment on purpose --> */}
         <SectionLinks/>
-        <SectionIcons/>
+        <ul className="nav-icons">
+          {socialLinks.map((social) => {
+            return (
+              <SectionIcons key={social.id} social={social.link}></SectionIcons>
+            );
+          })}
+        </ul>
       </div>
     </nav>
     );
 };
-export default NavBar;
